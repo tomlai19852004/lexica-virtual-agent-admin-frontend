@@ -1,0 +1,24 @@
+.pushable,
+.pusher {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.pushable,
+.pusher,
+.sidebar {
+  padding-top: 4em;
+}
+
+.pushable {
+  overflow: hidden;
+}
+
+.pusher {
+  position: absolute !important;
+  overflow-y: auto !important;
+}

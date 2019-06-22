@@ -1,0 +1,57 @@
+.field TextArea {
+  /* width: 100%; */
+}
+
+.field {
+  margin-bottom: 2em;
+}
+
+.recipientsTextArea {
+  /* min-height: 5px; */
+}
+
+.subjectTextArea {
+  /* min-height: 45px; */
+}
+
+.bodyTextArea {
+  min-height: 12em;
+}
+
+.errorSignal {
+
+
+
+ /* margin-bottom: 2em;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+height: 1em; */
+  padding-left: 1em;
+  color: darkred;
+  font-size: 12px;
+}
+
+.sendButton {
+  float: right;
+}

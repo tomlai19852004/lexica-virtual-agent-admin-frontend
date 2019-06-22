@@ -1,0 +1,33 @@
+:root {
+  --space-size: 1em;
+  --left-menu-width: 250px;
+
+  --vp-mobile-min-width: 0px;
+  --vp-mobile-max-width: 767px;
+
+  --vp-tablet-min-width: 768px;
+  --vp-tablet-max-width: 991px;
+
+  --vp-small-monitor-min-width: 992px;
+  --vp-small-monitor-max-width: 1200px;
+
+  --vp-large-monitor-min-width: 1201px;
+  --vp-large-monitor-max-width: 99999px;
+}
+
+@custom-media --mobile-viewport only screen and (max-width: 767px);
+@custom-media --tablet-viewport only screen and (min-width: 768px) and (max-width: 991px);
+@custom-media --small-monitor-viewport only screen and (min-width: 992px) and (max-width: 1200px);
+@custom-media --large-monitor-viewport only screen and (min-width: 1201px);
+
+/** less than or equals to mobile and tablet */
+@custom-media --leq-mt-viewport only screen and (max-width: 991px);
+
+/** less than or equals to mobile, tablet and small monitor */
+@custom-media --leq-mts-monitor-viewport only screen and (max-width: 1200px);
+
+/** greater than or equals to tablet, small and large monitor */
+@custom-media --geq-tsl-viewport only screen and (min-width: 768px);
+
+/** greater than or equals to small and large monitor */
+@custom-media --geq-sl-monitor-viewport only screen and (min-width: 992px);

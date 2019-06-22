@@ -1,0 +1,12 @@
+{
+    "extends": ["tslint-config-airbnb", "tslint-react"],
+    "rules": {
+      "jsx-no-multiline-js": false,
+      "quotemark":{ 
+        "options": [true, "single", "double", "backtick", "avoid-escape", "avoid-template"],
+        "severity": "warning"
+      },
+      "prefer-template": false
+    }
+  }
+  

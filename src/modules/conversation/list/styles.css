@@ -1,0 +1,77 @@
+:root {
+  --issue-border-color: #ccc;
+  --issue-username-color: #000;
+  --issue-time-color: #000;
+  --no-issue-message-color: #88f;
+}
+
+.issueMenu {
+  min-width: inherit;
+  width: inherit !important;
+}
+
+.issue~.issue {
+  margin-top: 0;
+}
+
+.issue {
+  align-items: center;
+  border-bottom: solid 1px;
+  border-color: var(--issue-border-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 3em 0.5em;
+  cursor: pointer;
+  height: 0;
+}
+
+.issue.issueSelected {
+  background-color: #fafafa;
+}
+
+.issue.notSeen {
+  font-weight: bold;
+}
+
+.issue .name {
+  color: var(--issue-username-color);
+  width: 40%;
+}
+
+.issue .ago {
+  color: var(--issue-time-color);
+  font-size: 0.8em;
+  float: right;
+  text-align: right;
+  width: 40%;
+}
+
+.noIssueMessage {
+  color: var(--no-issue-message-color);
+  padding-top: 2em;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.searchItem {
+  flex-grow: 1 !important;
+}
+
+.searchItem::before{
+  background: transparent !important;
+}
+.loader {
+  padding: 1.5em 0;
+}
+
+.searchBox {
+  min-height: 38px;
+  /* margin-right: 17px; */
+}
+
+.conversationList {
+  margin-top: 1em;
+  max-height: 747px - 38px - 40px;
+  overflow-y: auto;
+}

@@ -1,0 +1,57 @@
+@import "../../styles/variables.css";
+@import "../../styles/mixins.css";
+:root {
+  --in-message-color: #8daa91;
+  --out-message-color: #8387db;
+}
+
+.root {
+  max-height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 100%;
+  min-width: 60em;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* flex-wrap: no-wrap; */
+  /* flex-grow: 1; */
+  height: calc( 100vh - 4em); 
+  order: 1;
+  width: 20vw;
+  min-width: 20em;
+  position: relative;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  flex-grow: 5;
+  height: calc( 100vh - 4em);
+  max-height: 100vh;
+  order: 2;
+  width: 80vw;
+}
+
+.right .display {
+  flex-grow: 10;
+  overflow-y: auto;
+}
+
+.right .control {
+  border-top: solid #ccc 1px;
+  background-color: #fafafa;
+  flex-grow: 1;
+  max-height: 15em;
+  min-height: 15em;
+}

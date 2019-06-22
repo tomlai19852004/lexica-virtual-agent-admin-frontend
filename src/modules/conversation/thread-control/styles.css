@@ -1,0 +1,43 @@
+.container {
+  border-top: solid #ccc 1px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  border: none;
+  /* flex-grow: 19; */
+  height: 100%;
+  padding: 1em;
+  resize: none;
+  width: 100%;
+  min-height: 8em;
+}
+
+.textarea:focus {
+  outline: none !important;
+  border: none;
+}
+
+.inputBottom {
+  border: none;
+  flex-grow: 1;
+  padding: 0.5em;
+}
+
+.btnCloseIssue {
+  float: left;
+}
+
+.btnSendMessage {
+  float: right;
+}
+
+.errorSignal {
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  height: 1em;
+  float: right;
+}

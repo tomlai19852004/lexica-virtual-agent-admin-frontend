@@ -1,0 +1,48 @@
+const types = {
+  OPEN_EMAIL_SENDER: 'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:OPEN_EMAIL_SENDER',
+  CLOSE_EMAIL_SENDER: 'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:CLOSE_EMAIL_SENDER',
+  UPDATE_TO_FIELD_RECIPIENT:
+    'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:UPDATE_TO_FIELD_RECIPIENT',
+  UPDATE_CC_FIELD_RECIPIENT_EMAIL:
+    'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:UPDATE_CC_FIELD_RECIPIENT_EMAIL',
+  UPDATE_BCC_FIELD_RECIPIENT_EMAIL:
+    'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:UPDATE_BCC_FIELD_RECIPIENT_EMAIL',
+  REMOVE_RECIPIENT_EMAIL: 'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:REMOVE_RECIPIENT_EMAIL',
+  UPDATE_RECIPIENT: 'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:UPDATE_RECIPIENT',
+  ASYNC_SEND_EMAIL: 'ISSUE_CONVERSATION:MESSAGE_INPUT:EMAIL_SENDER:ASYNC_SEND_EMAIL',
+};
+
+const sendEmail = (mailTo: object, subject: object, body: object) => ({
+  type: types.ASYNC_SEND_EMAIL,
+  payload: {
+    ...mailTo,
+    ...subject,
+    ...body,
+  },
+});
+
+const openEmailSender = () => ({
+  type: types.OPEN_EMAIL_SENDER,
+});
+
+const closeEmailSender = () => ({
+  type: types.CLOSE_EMAIL_SENDER,
+});
+
+// not in use
+const updateRecipentEamil = (email: string, sendType = 'to') => ({
+  type: types.UPDATE_TO_FIELD_RECIPIENT,
+  payload: {
+    recipient: {
+      email,
+      sendType,
+    },
+  },
+});
+
+export {
+  types,
+  sendEmail,
+  openEmailSender,
+  closeEmailSender,
+};

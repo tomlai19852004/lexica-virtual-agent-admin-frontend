@@ -1,0 +1,7 @@
+.searchItem {
+  flex-grow: 1 !important;
+}
+
+.searchItem::before{
+  background: transparent !important;
+}

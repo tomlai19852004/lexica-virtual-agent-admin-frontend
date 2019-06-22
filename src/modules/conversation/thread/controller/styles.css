@@ -1,0 +1,23 @@
+.optionMenu {
+  position: fixed;
+  width: 60vw;
+  left: calc( 40vw + 20vw - 60vw/2 );
+  margin-top: 0 !important;
+  z-index: 9999;
+}
+
+.portal, .searchMessage {
+  position: fixed !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.portal i {
+  margin-right: 0 !important;
+}
+
+.portal div {
+  margin-bottom: 0 !important;
+}
