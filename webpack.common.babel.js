@@ -16,13 +16,16 @@ const config = {
     },
     output: {
         filename: '[name].[hash].js',
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
         modules: ['node_modules'],
         alias: {
             '../../theme.config$': path.join(__dirname, 'src/theme/theme.config'),
+            'c3.css': path.join(__dirname, 'node_modules/c3/c3.css'),
+            'datepicker.css': path.join(__dirname, 'node_modules/react-dates/lib/css/_datepicker.css')
         },
     },
     module: {
@@ -40,26 +43,41 @@ const config = {
                 exclude: [/node_modules/]
             },
             {
-                test: /\.scss$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader', options: { importLoader: 1 }
-                    },
-                    'sass-loader'
-                ]
-            },
-            {
-                test: /\.(jpe?g|png|gif|svg)$/i,
-                loader: 'file-loader'
-            },
-            {
-                test: /\.less$/,
-                use: ['css-loader','less-loader']
+                test: /\.json$/,
+                loader: 'json-loader',
             },
             {
                 test: /\.css$/,
-                use: ['css-loader']
+                use: [
+                    'style-loader', 
+                    // 'extract-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        }
+                    }
+                ],
+                exclude: [/node_modules/]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ],
+                include: [/node_modules/]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'less-loader'
+                ]
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -68,6 +86,10 @@ const config = {
                         loader: 'file-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader'
             }
         ]
     },

@@ -8,7 +8,7 @@ import { Loader } from 'semantic-ui-react';
 import * as d3 from 'd3';
 import { ChartGroup, ChartType } from '../Constants';
 
-import 'c3/c3.css';
+import 'c3.css';
 
 // tslint:disable-next-line
 const C3Chart: any = (require('react-c3js') as any).default;

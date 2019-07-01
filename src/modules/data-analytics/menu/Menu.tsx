@@ -57,7 +57,7 @@ class Menu extends React.PureComponent<MenuProps> {
       },
       {
         name: 'User Satisfaction',
-        logo: 'like outline',
+        logo: 'like',
         path: '/user-satisfaction',
         disabled: true,
       },

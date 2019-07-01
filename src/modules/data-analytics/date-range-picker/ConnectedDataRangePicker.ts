@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
 import { Moment } from 'moment';
 import { onDatesChange, onFocusChange } from './Actions';
-import 'react-dates/lib/css/_datepicker.css';
+import 'datepicker.css';
 
 const options = {
   isOutsideRange: ((day: any) => false) as any,

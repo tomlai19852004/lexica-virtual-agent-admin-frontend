@@ -34,7 +34,7 @@ class EmailSender extends React.PureComponent<EmailSenderProps> {
             {...input}
             placeholder={placeholder}
             type={type}
-            autoHeight={true}
+            autoheight={true}
           />
           : placeholder === 'recipients'
           ? <Input

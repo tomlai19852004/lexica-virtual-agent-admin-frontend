@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import { AppContainer } from 'react-hot-loader';
 import isNil from 'lodash-es/isNil';
 import { createStore } from './redux';

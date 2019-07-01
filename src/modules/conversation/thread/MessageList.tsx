@@ -377,7 +377,7 @@ class MessageList extends React.PureComponent<MessageListProps> {
                           <Label
                             color="orange"
                             pointing="above"
-                            style={{ 'border-radius': '1em' }}
+                            style={{ borderRadius: '1em' }}
                           >
                             <List selection={true} divided={true} relaxed="very" >
                               {!isEmpty(suggestions[messageId]) ? 'Suggested Answer: ' : ''}

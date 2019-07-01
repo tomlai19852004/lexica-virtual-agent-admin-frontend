@@ -6,7 +6,6 @@ import map from 'lodash-es/map';
 import isEmpty from 'lodash-es/isEmpty';
 
 import * as styles from './styles.css';
-
 export interface SuggestedAnswerProps {
   suggestionIndex: any;
   suggestions: string[];
@@ -47,7 +46,7 @@ export class SuggestedAnswer extends React.PureComponent<SuggestedAnswerProps> {
           <Modal.Description>
             <Header
               inverted={true}
-              icon="commenting outline"
+              icon="comment outline"
               content={`User Message:  ${message.msg}`}
             />
           </Modal.Description>

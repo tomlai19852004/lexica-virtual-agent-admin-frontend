@@ -10,14 +10,13 @@ const config = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 9000
+        port: 8000,
+        proxy: {
+            '/api': 'http://localhost:9000'
+        },
+        historyApiFallback: true
     },
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            loader: "babel-loader",
-            exclude: /node_modules/
-        }]
     },
     plugins: [
         new HardSourceWebpackPlugin(),
